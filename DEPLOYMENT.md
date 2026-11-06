@@ -1,5 +1,18 @@
 # Pebli Cloudflare deployment
 
+## Drawing and simplification release — 2026-11-07 (Asia/Shanghai)
+
+- Authorized by the user's explicit request to publish to GitHub and Cloudflare.
+- Runtime source: `c3d5a7dcfe83bf47767ef0ea1fb226a6237321d6` on `judexuhs/studio-for-kid` main. Includes the drawing/marked-edit iteration and the subsequent simplification together. The GitHub connector's write endpoint returned integration permission error 403; the existing authenticated Git transport completed a normal fast-forward push, without force.
+- Deployed URL: https://pebli-studio.judexuhs.workers.dev/ ; Worker version **`f3cb113c-f9eb-460c-8dd8-b22a131dea51`**. Existing `pebli-studio` bindings and storage were preserved. No Rifflo resource or provider secret was changed.
+- Known-good rollback: `d06b77c7-036c-475b-9c58-85915aa76cd2`, verified from the deployment list before publishing. From this package, run `npx wrangler rollback d06b77c7-036c-475b-9c58-85915aa76cd2` if needed; rollback restores code/assets, not stored data.
+- Independent release copy passed **82 tests**, Vite build and Wrangler deploy dry-run. Deployed assets: `index-Do9gS-P_.js` and `index-CKZztQye.css`.
+- HTTP smoke: homepage, both studio slash forms, all five inner pages and canvas showcase returned 200 and the new bundle paths; JS/CSS returned 200. Status is no-store with Secure/HttpOnly/SameSite guest cookie; missing guest returned 401, missing owned job 404 and cross-origin request 403.
+- Real Ego browser: desktop 1440×1000 and mobile 390×844 homepage/studio checked. Drew a blue shape, handed it to Pip, applied Hop, opened a one-work private presentation, and restored the drawing/movement after reload. All five public page headings, no horizontal overflow and updated saving help passed. No paid generation was submitted.
+- **AI generation is still unconfigured:** production status reports `configured=false`, `textConfigured=false`, `musicConfigured=false`. Deployment does not supply provider keys. Drawing, Pip, local save and presentation work; live Moss/Tavi/Nix generation still requires independent Worker secrets and a subsequent explicit live test.
+- Only the new `Release QA drawing 20261107` canvas was removed and its absence checked. Prior browser work and paid-request records were untouched. Ego task space 13 finished with no retained tabs. No new dev server was started; test/build/deploy commands exited normally.
+- Local evidence: `evidence/release-20261106-simplification/` (named when this release began before midnight); includes HTTP results and desktop/mobile captures. No screenshots, local work, credentials, runtime job data or builds were pushed to GitHub.
+
 ## Creative worlds release and source sync — 2026-11-06
 
 - The approved creative-worlds release was synchronized to `main` at https://github.com/judexuhs/studio-for-kid. Initial source commit: `50937bb7b8cac6ccd038a441f11ef206389e98e1`.

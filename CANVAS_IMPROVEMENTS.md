@@ -170,3 +170,15 @@ advanced controls, public help, private preview and actual offline HTML checked.
 Final model-only check also preserves explicit main-character selection when
 making a card. QA canvas removed; Ego space 11 finished; no new server processes,
 provider calls, production changes or GitHub synchronization. See REHEARSAL.md.
+
+
+### Subsequent authorized drawing/simplification release — 2026-11-07
+
+The user explicitly requested GitHub and Cloudflare publication. Runtime source
+`c3d5a7d` is on `judexuhs/studio-for-kid` main; the existing Worker is now version
+`f3cb113c-f9eb-460c-8dd8-b22a131dea51`. All 82 tests, build, Worker dry-run and
+production route/API checks passed. Live desktop/mobile drawing → Pip Hop →
+private presentation → reload completed with no paid provider request. Test canvas
+removed; browser space finished. Provider status remains unconfigured. Earlier
+no-deployment notes refer to the implementation phase before this authorization.
+See DEPLOYMENT.md for exact assets and the verified rollback target.

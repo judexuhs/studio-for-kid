@@ -2,6 +2,26 @@
 
 按阶段保留验证记录；当前功能以 2026-11-06 记录为准，以下较早的无真实 API、解锁、单文件和根路径入口限制保留为历史。本地生成验收与后续生产部署验收分别记录。
 
+## Production release verification — 2026-11-07
+
+User-authorized source sync and deployment completed for runtime commit `c3d5a7d`.
+A clean release copy passed 82 tests, Vite build and Wrangler dry-run. Production
+version `f3cb113c-f9eb-460c-8dd8-b22a131dea51` serves matching JS/CSS on all nine
+checked page routes. API status/cookie/cache, missing-owner 401, missing owned-job
+404 and cross-origin 403 checks passed. No valid paid-generation request was sent.
+
+Real Ego browser desktop/mobile checks: new three-choice entry, drawing canvas,
+a real blue hand-drawn shape handed to Pip, Hop application, private one-work
+presentation and reload restoration. Homepage at both sizes and all five inner
+pages were checked; help finds the current save/Favorite explanation. No document
+overflow. Only this run's QA canvas was removed and verified absent; space 13
+finished with keep: []. Existing development server and prior records untouched.
+
+Production providers remain unconfigured for images, stories and music. This
+release verifies the complete deployed UI and local capabilities, not live AI
+provider output. Exact identifiers/rollback are recorded in DEPLOYMENT.md;
+local evidence is in evidence/release-20261106-simplification/.
+
 ## Latest local iteration: simplification — 2026-11-06
 
 - Scoped failing tests preceded model changes. Final suite: **82/82**. Vite
