@@ -1,0 +1,11 @@
+.hero-compare{position:sticky;z-index:100;top:12px;margin:12px auto 0;width:650px;max-width:calc(100% - 28px);padding:12px 14px;background:#fff;border-radius:16px;box-shadow:0 8px 40px #243a372b;font-family:Gabarito,-apple-system,sans-serif}
+.hero-compare-caption{display:flex;justify-content:space-between;align-items:center;margin:0 4px 9px;font-size:12px;color:#64716b}
+.hero-compare-caption a{color:#287c50;text-decoration:none}
+.hero-compare-caption a:focus-visible,.hero-compare-choices button:focus-visible{outline:3px solid #287c50;outline-offset:3px}
+.hero-compare-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.hero-compare-choices button{min-width:0;display:flex;flex-direction:column;gap:5px;padding:8px 10px 10px;border:1px solid transparent;border-radius:10px;background:#f6f8f6;color:#55645a;font-size:13px;font-weight:500}
+.hero-compare-choices button:hover{background:#edf4ef}
+.hero-compare-choices button[aria-pressed=true]{border-color:#438866;background:#edf7f0;color:#245839}
+.hero-compare-choices img{height:38px;width:140px;max-width:100%;object-fit:contain}
+.home-hero .hero-copy h1 .hero-wordmark{display:inline-block;width:3.7em;height:1.2em;vertical-align:-.2em;object-fit:contain;margin-inline:-.06em .01em}
+@media(max-width:650px){.hero-compare{top:8px;padding:9px;max-width:calc(100% - 20px)}.hero-compare-caption{font-size:11px;margin-bottom:7px}.hero-compare-choices{gap:5px}.hero-compare-choices button{padding:6px 4px 8px;font-size:11px;gap:2px}.hero-compare-choices img{height:29px}.home-hero .hero-copy h1 .hero-wordmark{width:3.5em}}

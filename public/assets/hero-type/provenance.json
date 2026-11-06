@@ -1,0 +1,16 @@
+{
+  "method": "Font-derived SVG outlines, shaped with HarfBuzz; deterministic vector typography, no raster model generation.",
+  "generator": "scripts/make-hero-wordmarks.py",
+  "word": "create",
+  "sources": {
+    "paper": "Google Fonts / Lilita One, SIL OFL 1.1",
+    "handwritten": "Google Fonts / Pacifico, SIL OFL 1.1",
+    "overprint": "Existing Gabarito ExtraBold, public/assets/font-4.ttf"
+  },
+  "fontSources": "design/hero-type/",
+  "variants": [
+    "paper.svg",
+    "handwritten.svg",
+    "overprint.svg"
+  ]
+}

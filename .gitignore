@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.DS_Store
+
+.pebli-data/
+.env*
+
+.wrangler/
+.dev.vars*
+*.log
+.agents/
+.impeccable/
+evidence/
+archive/
+reference/
+Pebli Canvas.html
+skills-lock.json

@@ -1,0 +1,105 @@
+/* A read-only rendering of the actual studio, isolated from landing-page styles. */
+.real-canvas-showcase{max-width:1440px;padding:40px 40px 32px}
+.universe-heading{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:28px}
+.pebli-home .universe-heading h2{font-size:48px;line-height:1.08;letter-spacing:-.035em;margin:0}
+.universe-heading h2 span{color:#79718f}
+.universe-heading p{font-size:15px;line-height:1.65;color:var(--muted);max-width:44ch;margin:0 0 3px}
+.real-canvas-scroll{max-width:100%;overflow-x:auto;border:1px solid #e8e1ed;border-radius:16px;background:#fcfaf4;scrollbar-color:#c1b2d5 #f6f2fa;scrollbar-width:thin;overscroll-behavior-x:contain}
+.real-canvas-size{position:relative}
+.real-canvas-size iframe{position:absolute;left:0;top:0;transform-origin:0 0;border:0;pointer-events:none}
+.real-canvas-scroll:focus-visible{outline:3px solid #8066b5;outline-offset:5px}
+.universe-after{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:25px}
+.universe-after p{font-size:14px;color:#7b7086;margin:0}
+.universe-after a{display:flex;align-items:center;gap:12px;font-size:14px;color:#6953a1;min-height:44px}
+.app-showcase .motion-float{animation-iteration-count:1;animation-duration:4s}
+@media(max-width:760px){
+ .real-canvas-showcase{padding:42px 20px}
+ .universe-heading{display:block}.pebli-home .universe-heading h2{font-size:36px}.universe-heading p{font-size:14px;margin-top:18px}.universe-heading p br{display:none}
+ .universe-after{display:block;margin-top:20px}.universe-after p{font-size:13px;line-height:1.6;max-width:34ch}.universe-after a{margin-top:10px}
+}
+.canvas-browse{display:none}
+@media(max-width:760px){.canvas-browse{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}.pebli-home .canvas-browse button{width:44px;height:44px;border:1px solid #e8e1ed;border-radius:50%;color:#6953a1}.canvas-browse button:hover{background:#f5f0fa}}
+
+/* Homepage focus view: same studio nodes, less editing chrome, larger artwork. */
+.app-showcase .node{transform:none;border-radius:16px;box-shadow:0 6px 18px #51436a0c}
+.app-showcase .node.note{padding:20px;border-radius:16px 16px 16px 6px;background:#ffe38a;box-shadow:none}
+.app-showcase .node.note:before{display:none}
+.app-showcase .note textarea{font-size:21px;line-height:1.25;height:105px;margin:14px 0 0}
+.app-showcase .note .text-action{display:none}
+.app-showcase .task{overflow:hidden;box-shadow:none}
+.app-showcase .task-head{border-radius:16px;padding:8px 14px;gap:10px;min-height:64px}
+.app-showcase .task-head>img{width:45px;height:45px}
+.app-showcase .task-head strong{font-size:18px}
+.app-showcase .task-head span{font-size:11px}
+.app-showcase .task-head .partner-dot{display:none}
+.app-showcase .task-body{display:none}
+.app-showcase [data-node="character-task"] .task-body{display:none}
+.app-showcase [data-node="character-task"] .task-body>textarea{min-height:0;height:48px;font-size:16px;line-height:1.35;margin:0}
+.app-showcase .material-preview,.app-showcase .change-material,.app-showcase .make-button{display:none}
+.app-showcase .result{padding:8px 8px 0;background:#e3d8f6}
+.app-showcase .result .art{height:178px;border-radius:10px;background:#f2ebfc}
+.app-showcase .result .art-orbit,.app-showcase .result .accepted,.app-showcase .result-meta button,.app-showcase .result-decisions,.app-showcase .handoff{display:none}
+.app-showcase .result-meta{padding:16px 10px 18px}
+.app-showcase .result-meta strong{font-size:18px;font-weight:500}
+.app-showcase .result-meta span{display:none}
+.app-showcase [data-format="world"]{background:white;box-shadow:0 10px 24px #49355c14}
+.app-showcase [data-format="world"] .art{height:269px;background:transparent}
+.app-showcase [data-format="world"] .art>img{width:100%;height:100%;object-fit:contain}
+.app-showcase [data-format="world"] .result-meta{padding:12px 10px 16px}.app-showcase [data-format="world"] .result-meta strong{font-size:21px}
+.app-showcase [data-format="poster"] .art,.app-showcase [data-format="motion"] .art{height:165px}
+.app-showcase [data-format="poster"]{background:#f4e5c9}
+.app-showcase [data-format="poster"] .art{background:#fff5dc}
+.app-showcase [data-format="motion"]{background:#dae8fc}
+.app-showcase [data-format="motion"] .art{background:#eff5ff}
+.app-showcase [data-format="poster"] .result-meta strong,.app-showcase [data-format="motion"] .result-meta strong{font-size:17px}
+.app-showcase .left-tools,.app-showcase .crew-dock,.app-showcase .zoom-tools{box-shadow:0 4px 14px #4553680a}
+.app-showcase .topbar{background:#fffefb;height:72px}
+.app-showcase .canvas-caption,.app-showcase .canvas-help,.app-showcase .help-button,.app-showcase .header-actions{display:none}
+.app-showcase .connections path{stroke:#b4a3ca;stroke-width:2}
+.app-showcase .connections circle{fill:#a28abf}
+.app-showcase .crew-dock{left:108px;bottom:42px;transform:none}
+.app-showcase .zoom-tools{top:20px;right:24px;bottom:auto;z-index:25}
+.app-showcase .task-head{background:#c7e9ac}
+.app-showcase .partner-pip .task-head{background:#a9cef9}
+
+/* One shared adventure, with an identifiable contribution from every partner. */
+.app-showcase .showcase-avatar{display:block;flex:0 0 45px;width:45px;height:60px;background-image:url('/assets/crew-lineup.png');background-size:400% 100%;background-repeat:no-repeat}
+.app-showcase .task-head{padding:8px 14px;min-height:76px;gap:12px}
+.app-showcase .task-head strong{font-size:22px;line-height:1.2}
+.app-showcase .task-head div>span{font-size:12px;line-height:1.5;color:#355326}
+.app-showcase .partner-pip .task-head div>span{color:#254d7c}
+.app-showcase .node.showcase-story,.app-showcase .node.showcase-sound{padding:0;overflow:hidden;background:#fff7eb;box-shadow:none;border:0}
+.app-showcase .partner-tavi .task-head{background:#f8d7ac}
+.app-showcase .partner-tavi .task-head div>span{color:#74471d}
+.app-showcase .node.showcase-sound{background:#eee7fa}
+.app-showcase .partner-nix .task-head{background:#d9c6f4}
+.app-showcase .partner-nix .task-head div>span{color:#5a3f80}
+.app-showcase .showcase-output{padding:18px 20px 22px}
+.app-showcase .showcase-output h3{font-size:21px;line-height:1.15;font-weight:500;margin:0 0 14px;color:#704622;letter-spacing:-.02em}
+.app-showcase .showcase-output p{font-size:16px;line-height:1.5;color:#694d36;margin:0}
+.app-showcase .showcase-sound .showcase-output h3{color:#563d7a}
+.song-waveform{display:flex;align-items:center;gap:3px;height:75px;margin:6px 0 14px}
+.song-waveform i{flex:1;min-width:2px;background:#8061b0;border-radius:4px}
+.song-caption{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:#65517f}
+.song-caption>span:last-child{font-variant-numeric:tabular-nums}
+.app-showcase .showcase-crew-dock{gap:22px;padding:6px 18px;bottom:12px}
+.showcase-dock-partner{display:flex;align-items:center;gap:9px}
+.app-showcase .showcase-dock-partner .showcase-avatar{width:24px;height:32px;flex-basis:24px}
+.showcase-dock-partner strong,.showcase-dock-partner small{display:block}
+.showcase-dock-partner strong{font-size:15px;font-weight:500}.showcase-dock-partner small{font-size:11px;color:#59657a;margin-top:3px}
+.app-showcase .art .play-button{display:none}
+.canvas-audio{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.pebli-home .canvas-audio button{display:flex;align-items:center;gap:10px;min-height:44px;border:1px solid #ddd2eb;border-radius:10px;padding:10px 16px;background:#faf7ff;color:#604687;font-size:14px}
+.pebli-home .canvas-audio button:hover{background:#eee6f8}
+.canvas-audio>span{font-size:13px;color:#744425}
+
+/* Compact horizontal exhibition: the entire board fits a laptop viewport. */
+.app-showcase .left-tools{gap:2px;padding:6px;left:18px}
+.app-showcase .left-tools button{min-width:36px;min-height:36px}
+.app-showcase .left-tools i{margin:2px 6px}
+.app-showcase .zoom-tools{top:12px}
+.app-showcase [data-format="motion"]{display:flex;align-items:center;gap:18px;padding:8px}
+.app-showcase [data-format="motion"] .art{width:120px;height:120px;flex:0 0 120px}
+.app-showcase [data-format="motion"] .result-meta{padding:10px 12px 10px 0}
+.app-showcase [data-format="motion"] .result-meta strong{font-size:20px;line-height:1.2;max-width:12ch;display:block}
+.app-showcase .showcase-crew-dock{left:100px;bottom:20px}

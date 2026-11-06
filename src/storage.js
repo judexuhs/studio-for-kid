@@ -1,0 +1,7 @@
+let database;
+function openDatabase(){return database??=new Promise((resolve,reject)=>{const r=indexedDB.open('pebli-studio',1);r.onupgradeneeded=()=>{r.result.createObjectStore('boards',{keyPath:'id'});r.result.createObjectStore('meta')};r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});}
+async function operation(store,mode,fn){const db=await openDatabase();return new Promise((resolve,reject)=>{const tx=db.transaction(store,mode),request=fn(tx.objectStore(store));let result;request.onsuccess=()=>result=request.result;tx.oncomplete=()=>resolve(result);tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error||Error('Saving was interrupted.'))})}
+export const saveProject=board=>operation('boards','readwrite',s=>s.put({id:board.id||'legacy-canvas',board:{...board,id:board.id||'legacy-canvas'},updatedAt:Date.now()}));
+export const getProjects=()=>operation('boards','readonly',s=>s.getAll()).then(items=>items.sort((a,b)=>b.updatedAt-a.updatedAt));
+export const deleteProject=id=>operation('boards','readwrite',s=>s.delete(id));
+export async function migrateLegacy(){if(await operation('meta','readonly',s=>s.get('migrated')))return;let b,list=[];try{b=JSON.parse(localStorage.getItem('pebli-board-v2')||'null')}catch{}try{list=JSON.parse(localStorage.getItem('pebli-library-v2')||'[]')}catch{}if(b?.schema===2)await saveProject({...b,id:'legacy-canvas'});if(Array.isArray(list))for(const p of list)if(p.board?.schema===2)await saveProject({...p.board,id:p.id});await operation('meta','readwrite',s=>s.put(true,'migrated'))}

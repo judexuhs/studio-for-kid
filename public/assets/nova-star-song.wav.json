@@ -1,0 +1,40 @@
+{
+  "source": "Original authored synthesis; no generative service",
+  "durationSeconds": 8,
+  "sampleRate": 24000,
+  "notesHz": [
+    [
+      0.25,
+      523.25
+    ],
+    [
+      0.85,
+      659.25
+    ],
+    [
+      1.45,
+      783.99
+    ],
+    [
+      2.25,
+      1174.66
+    ],
+    [
+      3.1,
+      1046.5
+    ],
+    [
+      4.05,
+      783.99
+    ],
+    [
+      4.85,
+      659.25
+    ],
+    [
+      5.6,
+      523.25
+    ]
+  ],
+  "description": "Pentatonic bell melody over a soft C/G pad, attack and release envelopes. Homepage sound sample only."
+}
