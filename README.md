@@ -2,6 +2,12 @@
 
 独立儿童 AI 创作产品：彩色自由画布、真实图片生成与参考图修改、版本比较、可下载的动态角色卡。
 
+## 当前线上版本 — 2026-11-06
+
+本轮创作世界、全部伙伴入口和五个解释内页已部署到 https://pebli-studio.judexuhs.workers.dev/ ，Cloudflare 版本为 `d06b77c7-036c-475b-9c58-85915aa76cd2`。代码已同步到本仓库 `main`。
+
+**线上 AI 生成尚未启用**：目标 Worker 尚未配置 `OPENROUTER_API_KEY` 和 `FAL_KEY`，图片、故事及音乐接口会明确返回服务未连接。Pip 的预设动作、本机画布和作品展示不依赖供应商密钥。下面的真实生成成功记录属于本地验收，不代表线上生成已经验证。部署状态和回退点见 [DEPLOYMENT.md](DEPLOYMENT.md)。
+
 ## 独立安装与运行
 
 需要 Node.js 22 或更新版本。仓库：https://github.com/judexuhs/studio-for-kid。
@@ -23,7 +29,7 @@ Cloudflare 使用本项目的 Wrangler 依赖和 `wrangler.jsonc`。现有配置
 
 独立仓库包含运行代码、公共素材、字体许可和项目文档，不包含本机画布、请求记录、凭证、构建产物及历史设计归档。下方历史记录提到的 `evidence/` 截图与导出仅保留在原开发工作区。
 
-## 当前开发版 — 2026-11-06（未部署）
+## 本轮功能与发布前本地验收 — 2026-11-06
 
 本轮已完成用户确认的七项创作改进与五个解释内页。Moss、Tavi、Nix、Pip 从一开始即可使用，不再需要保留作品来解锁伙伴。Moss 生成和修改图片；Tavi 经 OpenRouter 写短故事、下一幕和三格漫画情节；Nix 在本地 Node API 与 Cloudflare Worker 都有歌曲／纯音乐接口；Pip 为图片添加 Float / Hop / Dance，仍是本地预设动作，不是模型生成视频。
 
@@ -34,7 +40,7 @@ Cloudflare 使用本项目的 Wrangler 依赖和 `wrangler.jsonc`。现有配置
 
 本地验收：59 项测试、Vite build 和 Wrangler dry-run 编译通过；实际完成 Tavi 文字、Moss 参考图编辑、Nix 130 秒 MP3、Pip 两个版本及刷新恢复。桌面 1440px、手机 390px 和离线 HTML 已检查，截图在 [evidence/worlds-20261106](evidence/worlds-20261106/)。详见 [验证记录](REHEARSAL.md)；单一实施计划仍为 [CANVAS_IMPROVEMENTS.md](CANVAS_IMPROVEMENTS.md)。
 
-这些是本地开发版结果，没有发布到线上。没有新增账号、云同步或公开分享；画布仍保存在本机浏览器，生成服务仍依赖配置与额度，角色一致性不作像素级保证。保留 `.pebli-data/jobs/` 的付费请求去重和恢复记录。
+以上是发布前的本地验收结果；当前线上状态以本文顶部和 DEPLOYMENT.md 为准。没有新增账号、云同步或公开分享；画布仍保存在本机浏览器，生成服务仍依赖配置与额度，角色一致性不作像素级保证。保留 `.pebli-data/jobs/` 的付费请求去重和恢复记录。
 
 ## 线上版本记录 — 2026-11-05
 

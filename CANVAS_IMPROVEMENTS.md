@@ -93,3 +93,15 @@ deduplication/recovery records and verification exports remain intact.
 Provider availability, model-dependent character consistency and browser-local
 storage remain limitations. This local development version is not deployed;
 there is no new account system, cloud sync or public sharing.
+
+### Subsequent authorized release — 2026-11-06
+
+The user subsequently requested Cloudflare deployment and GitHub synchronization.
+The accepted source is on `judexuhs/studio-for-kid` main, and the existing
+`pebli-studio` Worker now serves version `d06b77c7-036c-475b-9c58-85915aa76cd2`.
+Production routes, API access boundaries, desktop/mobile UI and an actual Pip
+Float creation passed. Server-side provider secrets are still absent, so live
+image/story/music generation remains unavailable; local provider success does
+not establish production availability. See DEPLOYMENT.md for the release and
+verified rollback target. Earlier no-deployment statements describe the original
+implementation phase before this later authorization.

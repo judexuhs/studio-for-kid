@@ -1,11 +1,15 @@
 # Pebli Cloudflare deployment
 
-## Source sync and release preparation — 2026-11-06
+## Creative worlds release and source sync — 2026-11-06
 
 - The approved creative-worlds release was synchronized to `main` at https://github.com/judexuhs/studio-for-kid. Initial source commit: `50937bb7b8cac6ccd038a441f11ef206389e98e1`.
 - The repository is independently installable with Node.js 22+, `npm ci`, and its own pinned Wrangler dependency. Source, public assets and font licenses are included; local canvases, job records, credentials, builds and historical design archives are excluded. The canonical development files remain in the original Pebli directory.
 - A clean independent installation passed all 59 tests, the Vite production build and Wrangler dry-run. Release assets: `index-D7BCS9QH.js` and `index-WX-eIhUL.css`.
-- **Cloudflare release pending:** the CLI has no authenticated session and browser sign-in requires the user. No new production version has been deployed in this attempt. The current public status endpoint still reports image and music providers unconfigured. Configure `OPENROUTER_API_KEY` (images and stories) and `FAL_KEY` (music) directly in the Pebli Worker secrets before validating live generation; do not send credentials through chat or source control.
+- **Deployed:** https://pebli-studio.judexuhs.workers.dev/ ; version `d06b77c7-036c-475b-9c58-85915aa76cd2`. The expired CLI session was renewed through Cloudflare's official OAuth flow. Only the existing `pebli-studio` Worker was updated; no Rifflo resources, bindings or storage migrations changed.
+- **Verified rollback target:** `ee23b295-1cc6-4266-b74c-b8f06121887c`, read from the deployment list immediately before this release. Use `npx wrangler rollback ee23b295-1cc6-4266-b74c-b8f06121887c` if needed; this restores code/assets, not stored data.
+- Live homepage, studio (both slash forms), all five explanatory pages, canvas showcase, release JS/CSS and crew asset returned HTTP 200 with the expected release bundle. API checks passed: secure HttpOnly/SameSite guest cookie, no-store status, 401 without a guest, 404 for a nonexistent owned job and 403 for a cross-origin request.
+- Real Chrome checks passed on the deployed site: desktop 1440px and mobile 390px homepage, the five distinct inner-page headings, mobile menu, studio entry and all four enabled partner tools. The Pip sample task completed a playable Float result without unlocking or provider credentials. No paid generation was submitted. The alternate Ego browser could not navigate to the Workers domain, so online UI acceptance used Chrome.
+- **AI generation remains unconfigured:** the Worker secret-name list is empty and status reports `configured=false`, `textConfigured=false`, `musicConfigured=false`. All three generation routes explicitly return 503; no paid request was submitted. Configure `OPENROUTER_API_KEY` (images and stories) and `FAL_KEY` (music) directly in Pebli Worker secrets before validating live generation; do not send credentials through chat or source control.
 - The original local development server was left running. Installation, test, build, dry-run and Git commands completed without leaving background processes.
 
 ## Confirmed scope — 2026-11-05
