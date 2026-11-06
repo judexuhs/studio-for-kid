@@ -105,3 +105,68 @@ image/story/music generation remains unavailable; local provider success does
 not establish production availability. See DEPLOYMENT.md for the release and
 verified rollback target. Earlier no-deployment statements describe the original
 implementation phase before this later authorization.
+
+## First creation, marked edits and drawing board — approved 2026-11-06
+
+The user selected recommendations 1 and 2, and clarified that drawing is a tool
+for the existing four partners, not a fifth partner. Preserve the current brand,
+free canvas, explicit generation, private local storage and immutable results.
+
+- [x] Three approachable starts: character, drawing, own idea; preserve typed
+      words when switching, keep existing inspiration, focus newly prepared tasks.
+- [x] A small set of specific continuations from the selected picture version;
+      returning canvases keep their view and no entry/continuation auto-generates.
+- [x] Mark an image area with pointer or keyboard-accessible area choices;
+      separate requested changes and preserved details, retain original versions.
+      The mark guides the provider; it is not a guarantee of pixel-exact inpainting.
+- [x] A real drawing tool with colors, brush size, eraser, undo/redo, safe clear,
+      empty prevention, drawing descriptions, reopening and partner handoffs.
+      Tavi/Nix use the child's written description, not image understanding.
+- [x] Freeze/validate marked edits and drawing provenance through save/reload and
+      provider requests. Keep local/Worker behavior aligned and requests explicit.
+- [x] Focused failing tests, implementation, tests/build, one batched desktop and
+      mobile browser pass, bounded fixes, documentation and process cleanup.
+
+This feature iteration is local development. The previous release remains online
+until this new version is explicitly requested for deployment.
+
+Implementation and local verification complete: 70 tests, Vite build, Worker dry-run,
+desktop/mobile UI, touch drawing, local Pip and restored editable strokes. Focused
+keyboard deletion and asynchronous drawing-export races were reproduced and fixed.
+A browser-local stub verified the marked request without external transmission.
+The user subsequently approved one real Moss request. It returned a colored turtle
+shell, preserved the white background/blue outline and omitted the red guide.
+The original and kept result survived reload. Position, size and aspect ratio
+changed: this is guidance, not pixel-exact inpainting. See REHEARSAL.md for evidence.
+
+Cleanup complete: both QA canvases removed, browser workspace finished, verification
+processes exited; existing dev server and prior paid-request records retained.
+
+## Product simplification — approved 2026-11-06
+
+Preserve all four partners, drawing, free canvas, immutable versions, offline
+exports and editable backups. Keep the landing composition and five public pages.
+No deployment, provider configuration, account, unlock, or automatic generation
+on entry, selection or restore. One editing agent; two read-only explorations.
+
+- [x] One result action hierarchy: edit, continue, download; favorite is not save.
+- [x] One explicit generation click for authored first ideas and marked edits;
+      use the latest board snapshot and retain independent original versions.
+- [x] One main-character identity, legacy compatibility and separate card formats.
+- [x] Current versions first in every material picker; exact older IDs accessible.
+- [x] Direct Pip movement controls, secondary lyrics and relevant continuations.
+- [x] Preview selected work first; optional presentation configuration and journey
+      restricted to selected work and its related edits, never all board results.
+- [x] Secondary canvas management; focused editing remains the normal path.
+- [x] Ideas focuses on starters; help and public instructions match the UI.
+- [x] Focused regression tests, build, batched desktop/mobile check, documentation
+      and cleanup. No paid provider test in this iteration.
+
+
+Validation completed: 82 tests and final Vite build passed. Desktop/mobile,
+exactly-one mocked request per explicit create/edit, current/older selections,
+local Pip Dance, character identity, drawing-to-Tavi description handoff, Nix
+advanced controls, public help, private preview and actual offline HTML checked.
+Final model-only check also preserves explicit main-character selection when
+making a card. QA canvas removed; Ego space 11 finished; no new server processes,
+provider calls, production changes or GitHub synchronization. See REHEARSAL.md.

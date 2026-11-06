@@ -374,3 +374,45 @@ Grow actions. Editing reduces the preview height; instructions can be collapsed.
 Branch choices appear near the source/drop point, or in a mobile bottom sheet.
 Automatic reveal pans only as needed and preserves zoom; explicit overview/focus
 controls can still change zoom. The homepage showcase remains unchanged.
+
+
+## First creation and drawing tools — local 2026-11-06
+
+Operate refinement of the existing Gabarito canvas, not a new visual world.
+The first empty canvas has three large choices; fields appear after selection.
+Prepared tasks open at normal reading size, and the canvas remains behind them.
+Returning work keeps its view. Focused work blocks background history/delete
+shortcuts, traps focus and restores it on close.
+
+The drawing surface is white paper on warm cream with an adjacent tool row,
+normal labeled description and partner controls, and a single preparation action.
+Mobile stacks the same controls and keeps touch strokes inside the paper.
+The eight ink colors are drawing content. Pen/eraser and color selection have
+visible shape/border states in addition to color. Unsaved exit is explicit;
+clear can be undone. Existing pictures are only edited on a new copy.
+
+Marked edits use a two-column picture/form sheet on desktop and a scrollable
+single column on mobile. The red #cb334e ellipse has a white halo so it remains
+visible on varied pictures. A nine-position select provides a keyboard alternative.
+Change and preserve fields remain separate. Focus #426de0 and reduced-motion
+rules carry through both tools.
+
+The tool surfaces intentionally extend the existing control scale with 8/10/16/20px
+radii and 13–30px type as recorded in creative-tools.css. Green/brown/blue control
+tints stay within the incumbent partner palette; the tools do not change the
+landing page. Impeccable's detector reported palette/type/radius advisories only.
+Its older schema/sidecar drift was recorded, not repaired as part of this feature.
+
+
+## 2026-11-06：减少默认操作的本地迭代
+
+延续现有 Gabarito、暖色画布、绿色 Moss 操作与伙伴色彩，不替换首页构图。
+
+- 结果保留作品、必要版本条、Favorite／Compare，随后只有 Edit／Continue／Download 三组。一次展开一组，手机展开后将菜单带进可视区域；材料和旧版成果复用同一组件。
+- 画板从起点直接进入。文字首创和圈选修改只保留一个明确生成按钮；不将素材选择或伙伴切换当成提交。
+- Pip 用三枚动作选项和可暂停预览；歌词等附加配置按需展开。当前版本素材优先，Earlier versions 始终可访问，已选旧版仍可识别。
+- 作品展示采用 Experience 模式：优先呈现已选作品，调整选项次级。封面不再重复出现在正文；动画封面保留动作和 reduced-motion。
+- 角色卡是导出呈现；主角设置次级，空画布不显示。自动保存状态持续可见，Favorite 不承担保存含义。卡片管理收入更多菜单。
+- Ideas 保留具体可编辑起点，移除重复格式总览。帮助与流程说明使用实际操作名称。
+
+验证有界完成：一次桌面／手机批量检查、集中修复、一次确认；颜色和字号检测仅提示既有设计文档尺度差异，无新增阻断项。没有把文档旧侧车格式整理纳入本轮。

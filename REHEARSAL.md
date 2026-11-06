@@ -2,6 +2,124 @@
 
 按阶段保留验证记录；当前功能以 2026-11-06 记录为准，以下较早的无真实 API、解锁、单文件和根路径入口限制保留为历史。本地生成验收与后续生产部署验收分别记录。
 
+## Latest local iteration: simplification — 2026-11-06
+
+- Scoped failing tests preceded model changes. Final suite: **82/82**. Vite
+  production build passed. No server/Worker behavior changed, so no extra Worker
+  build, provider configuration, deployment or GitHub push was performed.
+- Current-version materials preserve pinned older IDs. Character tests cover
+  legacy names, independent card metadata, switching/removing the main character,
+  clearing fields, reload, and making cards without implicitly choosing a main.
+- Export tests exclude unrelated branches and sibling versions; frozen ancestry
+  survives upstream deletion. A single Pip cover exports once with its movement.
+- Real Ego browser, existing local server: desktop 1440×1000 / 1470×730 and mobile
+  390×844. First create and marked edit each produced exactly one mocked request;
+  the edit used one exact source plus separate guide and preserve instructions.
+  Original versions stayed selectable; Pip Dance used the selected older version.
+  These were browser-local stubs, not provider calls or new evidence of AI quality.
+- Verified current/older material choices, optional Nix lyrics, two-way character
+  name editing, absence of a redundant card-save button, direct drawing entry,
+  saved-state restoration, and immediate presentation followed by adjustments.
+- Mobile final confirmation: only one result menu stays open and scrolls into
+  view. Drawing without a description handed to Tavi opens description entry;
+  saving it prepares the story without submitting anything or leaving a stale
+  creation picker. Recorded zero provider submissions on this path.
+- Ideas has no repeated format section or horizontal overflow and made zero API
+  requests. Help search finds the updated automatic-save and Favorite distinction.
+- The downloaded final HTML opened as a real local file: two images decoded,
+  the Pip cover retained motion-dance, three relevant journey records were present,
+  no scripts or external media links. It contains only chosen works and ancestry.
+- Read-only reviewers identified identity-switch/removal, frozen-ancestry,
+  animated-cover, source-invalidation, drawing-handoff and legacy-song-edit issues.
+  All were addressed; meaningful model regressions were reproduced before fixing.
+- UI detector: 33 advisory design-scale/color findings; no higher-severity result.
+  Existing sidecar/document drift was not repaired as an unrelated task.
+- Evidence: `evidence/simplification-20261106/`. Final desktop/menu/presentation
+  screenshots and exported HTML distinguish mocked images from real local motion.
+- Cleanup: the sole `QA simplification 20261106` canvas was deleted through the
+  application and its absence verified. Ego task space 11 finished with keep: [].
+  All commands exited. No development server was started or stopped; the existing
+  server and all prior paid-request recovery records remain intact.
+
+The visual confirmation preceded the final model-only regression fix that keeps
+card export from implicitly selecting a main character; its focused test, full
+82-test suite and final build passed. No further visual layout changed.
+This verifies implementation, not observed usability with children. Production
+and GitHub remain at their prior released version.
+
+## Previous local iteration: entry, drawing and marked edits — 2026-11-06
+
+- Scoped TDD: initial feature tests failed before implementation. Additional
+  export-race test reproduced a PNG/stroke mismatch before the snapshot fix;
+  point-budget test covers keeping the last partial stroke. Final suite: **70/70**.
+- Vite production build passed. Worker dry-run compiled the shared validation and
+  generation code. The first CLI stalled after compilation and had a sandbox log
+  warning; its exact process tree was stopped and verified gone. A rerun with a
+  writable log path and metrics disabled finished with exit 0. No deployment.
+- Real Ego browser, existing local server: desktop at 1470×730 and 1440×1000,
+  mobile at 390×844. Entry switching and cancelled drawing preserve typed words;
+  own idea prepares a focused task. Empty drawings cannot be saved. Dot/freehand,
+  colors, eraser, undo/redo and clear/undo were exercised. Mobile CDP touch input
+  added an actual stroke. Reopening and refreshing restored editable drawings.
+- Pip made an actual local Float result from the drawing. Tavi and Nix tasks
+  prepared without generation; empty descriptions disable their handoff. A
+  reopened drawing saved a separate material and kept the original.
+- Reproduced focused-task Delete leaving the page inert, then verified Delete
+  and Cmd/Ctrl+Z cannot remove the task from its detail view, Tab remains trapped,
+  and closing restores the background. Drawing materials download as PNG even
+  when they have a written description. Cancelling file selection preserves the
+  entry component by code inspection; no native chooser was operated in QA.
+- Marked-edit keyboard selection and pointer drag both work. Browser-local stub
+  explicitly prevented provider submission and captured `intent: edit`, one
+  unchanged original, a separate PNG guide, normalized bounds
+  `{x:0.24,y:0.22,width:0.36,height:0.48}`, and the preserve instruction.
+  Model/provider tests also verify request order, size limits and the instruction
+  to omit the visible marking from the output. This is not a real model result.
+- Automatic approval initially rejected the external Moss test. The user then
+  explicitly approved one request. The completed test is recorded below; no
+  unapproved retry or additional generation was made.
+- Screenshots: [entry desktop](evidence/drawing-tools-20261106/entry-desktop.png),
+  [entry mobile](evidence/drawing-tools-20261106/entry-mobile.png),
+  [drawing mobile](evidence/drawing-tools-20261106/drawing-mobile.png),
+  [marked edit desktop](evidence/drawing-tools-20261106/marked-edit-desktop.png),
+  [marked edit mobile](evidence/drawing-tools-20261106/marked-edit-mobile.png).
+- Impeccable scan found design-scale advisories only, reviewed against the existing
+  canvas identity. No broader redesign or design-tool migration was performed.
+
+The two named QA canvases were deleted through the app, Ego TaskSpace 7 was
+finished, and all task-owned command sessions exited. The pre-existing dev server
+PID 57830 was left running. No paid request records were deleted.
+
+This iteration is local; the prior Cloudflare release and GitHub main are unchanged.
+Circle guidance is model-dependent; local browser storage still needs backups.
+
+### Subsequently approved real Moss edit — 2026-11-06
+
+The user explicitly approved one real test of the synthetic blue circle with
+“Make the blue circle into a cheerful turtle shell” and
+“Keep the white background and blue outline”. The temporary circle was recreated
+using the same stroke points after the previous QA canvas had been cleaned up.
+
+- One unique request: `ceea6597-f51f-4dfd-b940-c8f9e4f933b0`; polling reused its ID.
+  The live browser request used one original, a separate marked PNG and normalized
+  bounds `{x:0.24,y:0.22,width:0.36,height:0.48}`. The reference matched the saved
+  original exactly. The existing configured local service returned a real image.
+- Visual result: colored shell plates, blue outer outline and white background;
+  the red positioning oval is absent. The model also changed the shell's scale
+  and position, converted the 800×520 original to a 1024×1024 result, and added two
+  small appendages. This confirms reference-guided editing, not strict masked
+  inpainting or pixel-exact preservation outside the selection.
+- The original image remained unchanged. Keep, Compare and browser reload passed;
+  both images and the kept state restored, and no new generation started on reload.
+- Evidence: [original](evidence/drawing-tools-20261106/moss-live-original.png),
+  [actual result](evidence/drawing-tools-20261106/moss-live-result.png),
+  [comparison](evidence/drawing-tools-20261106/moss-live-comparison.png), and
+  [request/persistence checks](evidence/drawing-tools-20261106/moss-live-check.json).
+- The named QA canvas was removed after saving evidence, and Ego TaskSpace 8
+  was finished. The paid-request recovery record and existing server were retained.
+- Only QA content was used. No runtime code changed and no suite/build was repeated
+  for this evidence/document update. Cloudflare and GitHub remain unchanged.
+
 ## 后续生产部署与 GitHub 同步 — 2026-11-06
 
 - 用户随后明确要求部署并同步 GitHub。独立安装、59 项测试、Vite build 和 Wrangler dry-run 通过；源码已同步至 `judexuhs/studio-for-kid` 的 main。

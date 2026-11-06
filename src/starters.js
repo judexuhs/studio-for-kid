@@ -13,7 +13,7 @@ export function studioEntry(items,params){
   let board=canvasEntry([]).board;board.name={moss:'My pictures',tavi:'My story',nix:'My soundtrack',pip:'My moving character'}[crew];
   if(crew==='pip')board.nodes.push({id:'sample',kind:'material',title:'A picture to try with Pip',image:'asset:fox',x:140,y:180});
   board=reduceBoard(board,{type:'task',id:'task',partner:crew,source:crew==='pip'?'sample':null,x:crew==='pip'?530:160,y:160});
-  return {board,showStart:false,persist:true};
+  return {board,showStart:false,persist:true,focusId:'task'};
  }
  const goal=params.get('create');
  const project=CREATION_GOALS.find(item=>item.id===goal);
@@ -25,11 +25,11 @@ export function studioEntry(items,params){
    board.unlocked=true;
    board.nodes=[{id:'sample',kind:'material',x:140,y:180,title:'A picture to try with Pip',image:'asset:fox'},{id:'task',kind:'task',inline:true,partner:'pip',x:530,y:160,source:'sample',text:'Make my explorer float gently.',move:'float'}];
   }else board.unlocked=items.some(p=>p.board.unlocked);
-  return {board,showStart:false,persist:true};
+  return {board,showStart:false,persist:true,focusId:'task'};
  }
 
  const starter=STARTERS.find(s=>s.id===params.get('starter'));
- if(starter){const board=newProject(starter.prompt+(params.get('twist')==='1'?' '+starter.twist:''));return {board:{...board,name:starter.title,unlocked:items.some(p=>p.board.unlocked)},showStart:false,persist:true}}
+ if(starter){const board=newProject(starter.prompt+(params.get('twist')==='1'?' '+starter.twist:''));return {board:{...board,name:starter.title,unlocked:items.some(p=>p.board.unlocked)},showStart:false,persist:true,focusId:'task'}}
  if(params.get('new')==='1')return canvasEntry([]);
  const selected=items.find(p=>p.board.id===params.get('project'));
  if(selected)return {board:restore(JSON.stringify(selected.board)),showStart:false};

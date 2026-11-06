@@ -16,3 +16,16 @@ test('a new world or comic brief is not overridden by a mandatory single-charact
  const payload=buildProviderRequest({prompt:'A floating library above the clouds',intent:'create'});
  assert.match(payload.prompt,/floating library/);assert.doesNotMatch(payload.prompt,/Show one original character/);
 });
+test('marked edits preserve the original and attach a separate positioning guide',()=>{
+ const original='data:image/png;base64,YQ==',guide='data:image/png;base64,Yg==';
+ const editRegion={x:.1,y:.2,width:.3,height:.4};
+ const input=validateRequest({requestId:'marked',prompt:'Make the scarf yellow.',references:[original],intent:'edit',editRegion,editGuide:guide});
+ assert.deepEqual(input.editRegion,editRegion);const payload=buildProviderRequest(input);
+ assert.equal(payload.input_references[0].image_url.url,original);assert.equal(payload.input_references[1].image_url.url,guide);
+ assert.match(payload.prompt,/positioning guide/);assert.match(payload.prompt,/Do not draw the marking/);
+});
+test('marked edit validation rejects invalid areas, orphan guides and excessive reference budgets',()=>{
+ const image='data:image/png;base64,YQ==',region={x:.1,y:.1,width:.2,height:.2};
+ const good={requestId:'marked',prompt:'Blue scarf',references:[image],intent:'edit',editRegion:region,editGuide:image};
+ for(const patch of [{editRegion:{...region,x:.95}},{editRegion:{...region,width:0}},{editGuide:'https://example.com/guide.png'},{editRegion:null},{references:[]},{intent:'fusion'},{references:[image,image,image,image]},{editGuide:'data:image/png;base64,'+'a'.repeat(9e6)}])assert.throws(()=>validateRequest({...good,...patch}));
+});

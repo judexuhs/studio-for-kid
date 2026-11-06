@@ -7,3 +7,4 @@
 @media(prefers-reduced-motion:reduce){.work-detail *, .world-showcase *, .world-panel *{animation:none!important;transition:none!important}}
 
 .material-view{position:absolute;right:10px;top:10px;background:#fffefbe8;border-radius:10px;width:44px;height:44px;z-index:2}.work-detail-body .task-heading{background:#e8efdd}.work-detail-body:has(.unit-story) .task-heading{background:#f9dab0}.work-detail-body:has(.unit-story){background:#fff9ef}
+.world-presentation .motion-float{animation-iteration-count:1;animation-duration:4s}.world-presentation .motion-hop,.world-presentation .motion-dance{animation-iteration-count:1;animation-duration:3s}
