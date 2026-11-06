@@ -1,5 +1,13 @@
 # Pebli Cloudflare deployment
 
+## Source sync and release preparation — 2026-11-06
+
+- The approved creative-worlds release was synchronized to `main` at https://github.com/judexuhs/studio-for-kid. Initial source commit: `50937bb7b8cac6ccd038a441f11ef206389e98e1`.
+- The repository is independently installable with Node.js 22+, `npm ci`, and its own pinned Wrangler dependency. Source, public assets and font licenses are included; local canvases, job records, credentials, builds and historical design archives are excluded. The canonical development files remain in the original Pebli directory.
+- A clean independent installation passed all 59 tests, the Vite production build and Wrangler dry-run. Release assets: `index-D7BCS9QH.js` and `index-WX-eIhUL.css`.
+- **Cloudflare release pending:** the CLI has no authenticated session and browser sign-in requires the user. No new production version has been deployed in this attempt. The current public status endpoint still reports image and music providers unconfigured. Configure `OPENROUTER_API_KEY` (images and stories) and `FAL_KEY` (music) directly in the Pebli Worker secrets before validating live generation; do not send credentials through chat or source control.
+- The original local development server was left running. Installation, test, build, dry-run and Git commands completed without leaving background processes.
+
 ## Confirmed scope — 2026-11-05
 
 Deploy the approved Pebli homepage and studio as an independent Cloudflare Worker. Keep guest access, with no login. Reuse Rifflo's OpenRouter Qwen image and fal MiniMax music providers, with an independent API, secrets, private media and durable job records. Do not deploy or modify `rifflo-app`, its D1 database, media bucket or domain.
@@ -40,7 +48,7 @@ Deployment URL, version, validation and rollback will be recorded below after de
 
 ## Commands and recovery
 
-Run from `experiments/crew-workbench`:
+Run from the Pebli package directory (the standalone repository root, or `experiments/crew-workbench` in the original development workspace):
 
 ```sh
 npm test
@@ -49,7 +57,7 @@ npm run cf:deploy
 
 The deploy command builds only Pebli and uses its own Wrangler config. Credentials are configured through Cloudflare, never checked into this project. Do not run the parent Rifflo deploy command for this app.
 
-For later releases, record the current version with `../../node_modules/.bin/wrangler deployments list` before deployment. Revert code/assets with `../../node_modules/.bin/wrangler rollback <known-good-version-id>` from this directory. Rollback does not undo Durable Object storage or R2 data. For the final patch, the immediately preceding version is `3535e8be-0c0d-4bb4-ac42-707fe0160640`. This is the first product release; no pre-Pebli version exists. To pause paid generation without deleting saved work, remove provider Secrets in Pebli settings; static pages and browser-saved canvases still work. Do not delete the bucket or Durable Object namespace as a rollback.
+For later releases, record the current version with `npx wrangler deployments list` before deployment. Revert code/assets with `npx wrangler rollback <known-good-version-id>` from this directory. Rollback does not undo Durable Object storage or R2 data. For the final patch, the immediately preceding version is `3535e8be-0c0d-4bb4-ac42-707fe0160640`. This is the first product release; no pre-Pebli version exists. To pause paid generation without deleting saved work, remove provider Secrets in Pebli settings; static pages and browser-saved canvases still work. Do not delete the bucket or Durable Object namespace as a rollback.
 
 ## Direct canvas release — 2026-11-05
 
