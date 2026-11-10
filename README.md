@@ -1,3 +1,11 @@
+## Example canvas and online generation limits — 2026-11-11 (released)
+
+**My canvases → Nova & the star song · Example** is now live. The editable
+sample never opens by default and includes pictures, story, comic, stickers,
+music and motion. Online generation count caps have been removed; provider
+balance/limits and request deduplication remain. Runtime commit `e50782b`;
+Worker `36d08388-02be-4d45-b7ee-4a2f88429117`. See DEPLOYMENT.md.
+
 ## Canvas styles and Nix squirrel — 2026-11-10 (released)
 
 Published together: simpler in-card Continue, stable result actions, in-card story
@@ -146,7 +154,7 @@ npm run build
 
 产品说明：PRODUCT.md；视觉规范：DESIGN.md；验证记录：REHEARSAL.md；素材与 API 来源：ASSETS.md。无 Rifflo 主站改动；独立 Pebli 部署见 DEPLOYMENT.md。
 
-## Optional example canvas — 2026-11-11 (local)
+## Optional example canvas — 2026-11-11 (released)
 
 Open **My canvases → Nova & the star song · Example** to explore an editable
 sample with pictures, two scene versions, story, comic, stickers, music and motion.

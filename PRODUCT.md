@@ -1,4 +1,4 @@
-## Generation limits — 2026-11-11 (local change, not deployed)
+## Generation limits — 2026-11-11 (released)
 
 At the owner’s request, the Cloudflare service no longer caps generation counts
 per guest, network, hour, day or music category. Existing budget counters do not

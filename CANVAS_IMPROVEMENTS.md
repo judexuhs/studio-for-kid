@@ -242,7 +242,7 @@ verified request style/reference payloads without paid model calls. Sample art
 was a fixture, not evidence of new generation quality. Existing local dev server
 was reused; no server started, no deployment or provider configuration changed.
 
-## Built-in example canvas — 2026-11-11 (local, not deployed)
+## Built-in example canvas — 2026-11-11 (released; see DEPLOYMENT.md)
 
 `My canvases` now always offers **Nova & the star song** as an authored Example.
 Only an explicit click loads its assets and creates an editable independent board.

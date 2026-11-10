@@ -1,19 +1,29 @@
 # Pebli Cloudflare deployment
 
-## Example canvas + generation caps — 2026-11-11 (GitHub synced, CF pending)
+## Example canvas + generation caps — 2026-11-11 (released)
 
-- User authorized publishing both changes together to GitHub and Cloudflare.
-- Runtime commit: `e50782b` on `judexuhs/studio-for-kid` main; fast-forward push.
-- Optional authored example canvas plus removal of guest/network/global/hourly/
-  daily/music generation count caps. Ownership, deduplication, no automatic paid
-  retries, payload validation and seven-day retention remain unchanged.
-- Clean release checkout: pinned npm install, 92 tests, Vite build and Worker
-  dry-run passed. Bundles: `index-NGdyjl6R.js`, `index-DlaM-Bcr.css`.
-- Cloudflare publication is pending renewed login. Wrangler's prior login was
-  unavailable and the OAuth attempt timed out; the browser is awaiting the owner’s
-  Cloudflare/Google sign-in. No Worker upload or production mutation occurred.
-- Intended target remains `pebli-studio`; verify its current deployment/rollback
-  version after authentication before uploading. No binding or migration changes.
+- Published both user-authorized changes together. Runtime commit: `e50782b`
+  on `judexuhs/studio-for-kid` main; normal fast-forward push.
+- Worker `pebli-studio`, 100% traffic:
+  `36d08388-02be-4d45-b7ee-4a2f88429117`, published 01:43 Asia/Shanghai.
+  URL: https://pebli-studio.judexuhs.workers.dev/studio .
+- Verified previous version / rollback:
+  `e5e16cb2-4dbd-4c00-90e0-7c45dadba217`.
+- Optional editable Example in My canvases; never default-opened. Removed online
+  guest/network/global/hourly/daily/music generation count caps, including checks
+  against legacy counters. Ownership, deduplication, no automatic paid retries,
+  payload validation and seven-day retention remain. Provider balance and limits
+  still apply. Local development request/concurrency safeguards were not changed.
+- Clean pinned install: 92 tests, Vite build and Worker dry-run passed.
+  Bundles: `index-NGdyjl6R.js`, `index-DlaM-Bcr.css`.
+- Eight live page paths returned 200 with the expected release bundle. Example
+  comic, stickers, audio, story and JS hashes match the release build. Status
+  reports all three providers configured, with no-store. Ownerless jobs return
+  401 and foreign-origin generation returns 403. No paid production model call.
+- User completed renewed Cloudflare OAuth after the default automated broad-scope
+  flow was rejected. No bindings, migrations, secrets or Rifflo resources changed.
+- Desktop/mobile local UI verification passed before release. Post-deploy browser
+  verification is awaiting return of browser control from the login handoff.
 
 ## Canvas styles and Nix squirrel — 2026-11-10 (Asia/Shanghai)
 
