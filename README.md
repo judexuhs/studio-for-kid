@@ -1,3 +1,14 @@
+## Canvas-first editing — 2026-11-10 (local, not deployed)
+
+The start form and automatic full-screen work editor are removed. A new canvas
+starts with an editable, persisted creation card; generation, progress, results
+and picture revisions stay at that card. Drawing opens in canvas coordinates.
+Partner tasks, uploads and continuations remain on the canvas. Compare and final
+presentation/export views remain separate. Existing production status below is
+unchanged. Validation: 84 tests, Vite build, desktop and 390px mobile UI; browser
+mock image creation/revision, real local drawing → Pip, and reload recovery.
+No paid model requests or deployment. See CANVAS_IMPROVEMENTS.md.
+
 # Pebli — real character creation
 
 独立儿童 AI 创作产品：彩色自由画布、真实图片生成与参考图修改、版本比较、可下载的动态角色卡。

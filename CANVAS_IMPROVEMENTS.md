@@ -182,3 +182,26 @@ private presentation → reload completed with no paid provider request. Test ca
 removed; browser space finished. Provider status remains unconfigured. Earlier
 no-deployment notes refer to the implementation phase before this authorization.
 See DEPLOYMENT.md for exact assets and the verified rollback target.
+
+
+### Canvas-first editing — 2026-11-10 (local, not deployed)
+
+User confirmed replacing standalone creation/input surfaces with direct canvas
+editing. Single-agent implementation; no main Rifflo application changes.
+
+- [x] Blank persisted draft card, optional starting ideas, draw/upload shortcuts.
+- [x] Remove start-page component and automatic full-screen task detail view.
+- [x] Task preparation, progress, results and revisions remain in canvas units.
+- [x] Inline drawing with pointer handling, undo/redo, explicit exit and local Pip.
+- [x] Keep compare and final presentation/export surfaces.
+- [x] Two new reducer tests first failed, then passed; 84 application tests pass.
+- [x] Final Vite build; desktop and 390px mobile UI checks. Browser-only mocks
+      confirmed one request per image create/revise and one visible unit with
+      both versions. Desktop strokes/mobile dot input and real local Pip passed;
+      saved drawing and animation restored after reload.
+
+Ego space 5 finished. Reused pre-existing server on port 4175; no server started
+or terminated. No provider requests, deployment or GitHub synchronization.
+The independent experiment directory was already untracked in this checkout;
+existing unrelated main-app modifications were preserved. Impeccable's nine
+advisories match incumbent tokens and its stale sidecar; no tooling migration.

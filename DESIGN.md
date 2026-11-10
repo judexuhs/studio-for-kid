@@ -1,3 +1,14 @@
+## Canvas editing update — 2026-11-10 (local)
+
+Creation is an Operate surface. Keep Gabarito, the cream dotted canvas, crew colors
+and existing 320px work cards. Replace the start-page layer with one editable
+card. Instructions, progress, results and compact marked revisions occupy that
+card. Drawing is a 680px canvas surface (320px on mobile), with internal scrolling,
+not a modal or full-screen page. Keep visible focus, keyboard region selection,
+reduced motion, draft text, old versions and explicit unsaved drawing exit.
+The change reuses existing colors, 13–25px type and 16px radii. The detector's nine
+advisories concern the existing sidecar/token mismatch, not a new visual system.
+
 ---
 name: Pebli
 description: 清爽软件首页连接彩色创作画布，孩子安排伙伴把想法变成作品。

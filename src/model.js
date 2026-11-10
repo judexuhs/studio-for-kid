@@ -23,6 +23,9 @@ case 'revise-inline':{
  if(!owner||!result.image||validate(a.text)||owner.job?.status==='working')return b;
  return {...b,nodes:b.nodes.map(n=>n.id===owner.id?{...n,partner:'moss',source:result.id,sources:[result.id],text:a.text,preserve:a.preserve||'',editRegion:validRegion(a.editRegion)?structuredClone(a.editRegion):null,goal:undefined,operation:undefined,resultTitle:result.title,job:undefined,activeResultId:result.id}:n)};
 }
+case 'draft': {
+ return {...b,nodes:[...b.nodes,{id:a.id,kind:'task',inline:true,partner:'moss',goal:'idea',text:'',source:null,...freePosition(b,{x:a.x??160,y:a.y??160})}]};
+}
 case 'creation': {
  if(validate(a.text)||!CREATION_TYPES[a.goal])return b;
  const node={id:a.id,kind:'task',inline:true,partner:'moss',goal:a.goal,title:CREATION_TYPES[a.goal].label,text:a.text,source:null,...freePosition(b,{x:a.x??160,y:a.y??160})};

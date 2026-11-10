@@ -1,3 +1,13 @@
+## Canvas-first creation — 2026-11-10 (local)
+
+Supersedes the earlier three-choice start panel and automatic focused editor:
+children write directly in a canvas creation card. The same card holds progress,
+results and versions. Image revisions expand at the selected work; drawing is an
+inline canvas surface. Partner selection, continuation and uploads do not open a
+separate input page. New drafts persist without triggering generation; all model
+requests still require an explicit creation action. Compare and presentation are
+viewing/export surfaces and remain separate. Unsaved drawing exit stays explicit.
+
 # Pebli：儿童 AI 创作画布
 
 ## 当前版本：精简创作流程 — 2026-11-06

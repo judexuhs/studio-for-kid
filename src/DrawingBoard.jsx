@@ -4,7 +4,7 @@ import {drawingHistory,pointOnDrawing,validDrawing,strokeCapacity} from './creat
 import {renderStrokes,exportDrawing,trapDialogKeys} from './drawing-renderer';
 import {validate} from './model';
 const COLORS=[['Ink','#25344b'],['Red','#c94351'],['Orange','#b8621c'],['Yellow','#d6a729'],['Green','#287c50'],['Blue','#356dc3'],['Purple','#8050b0'],['White','#ffffff']];
-export function DrawingBoard({source,initialPartner='',onSave,onClose}){
+export function DrawingBoard({inline=false,source,initialPartner='',onSave,onClose}){
  const initial=source?.drawing||{version:1,width:800,height:520,strokes:[],...(source?.image?{baseImage:source.image}:{})};
  const [history,setHistory]=useState({strokes:initial.strokes,past:[],future:[]}),[active,setActive]=useState(null),[tool,setTool]=useState('pen'),[color,setColor]=useState(COLORS[0][1]),[width,setWidth]=useState(6),[description,setDescription]=useState(source?.text||''),[partner,setPartner]=useState(initialPartner),[error,setError]=useState(''),[pending,setPending]=useState(false),[leaving,setLeaving]=useState(false);
  const canvas=useRef(null),stroke=useRef(null),saving=useRef(false);const dirty=history.past.length>0||history.future.length>0||description!==(source?.text||'');
@@ -25,9 +25,9 @@ export function DrawingBoard({source,initialPartner='',onSave,onClose}){
  }
  function keys(e){
   if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'&&!e.target.closest('input,textarea')){e.preventDefault();e.stopPropagation();act({type:e.shiftKey?'redo':'undo'});return}
-  trapDialogKeys(e,close);e.stopPropagation();
+  if(inline){if(e.key==='Escape'){e.preventDefault();close()}}else trapDialogKeys(e,close);e.stopPropagation();
  }
- return <section className="drawing-overlay" role="dialog" aria-modal="true" aria-labelledby="drawing-title" onKeyDown={keys}>
+ return <section className={`drawing-overlay ${inline?'inline-drawing':''}`} role={inline?"region":"dialog"} aria-modal={inline?undefined:true} aria-labelledby="drawing-title" onKeyDown={keys}>
   <div className="drawing-workspace"><header><h2 id="drawing-title">Your drawing board</h2><button aria-label="Close drawing board" disabled={pending} onClick={close}><X size={22}/></button></header>
    <div className="drawing-tools" aria-label="Drawing tools"><div className="drawing-tool-pair"><button aria-label="Pencil" aria-pressed={tool==='pen'} onClick={()=>setTool('pen')}><Pencil size={20}/></button><button aria-label="Eraser" aria-pressed={tool==='eraser'} onClick={()=>setTool('eraser')}><Eraser size={20}/></button></div>
     <div className="drawing-colors" aria-label="Ink colors">{COLORS.map(([name,value])=><button key={name} aria-label={name+' ink'} aria-pressed={color===value&&tool==='pen'} style={{'--ink-color':value}} onClick={()=>{setColor(value);setTool('pen')}}><span/></button>)}</div>

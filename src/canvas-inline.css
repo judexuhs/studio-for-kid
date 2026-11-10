@@ -1,0 +1,38 @@
+/* Creation stays in canvas coordinates, alongside the work it belongs to. */
+.canvas-idea-sparks { margin: 12px 0; font-size: 14px; color: #52624d; }
+.canvas-idea-sparks summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }
+.canvas-idea-sparks button { width: 100%; min-height: 44px; padding: 8px; text-align: left; background: #f3f4ed; margin-bottom: 6px; }
+.canvas-idea-sparks p { font-size: 13px; line-height: 1.4; }
+.canvas-start-tools { display: flex; gap: 12px; margin-top: 12px; }
+.canvas-start-tools button { min-height: 44px; gap: 6px; font-size: 14px; color: #52624d; }
+.canvas-revision.revision-sheet.marked-revision { position: relative; inset: auto; transform: none; width: 100%; max-height: 70dvh; overflow: auto; display: block; padding: 16px; border-radius: 16px; box-shadow: none; z-index: auto; }
+.canvas-revision.marked-revision > header { margin-bottom: 16px; gap: 8px; }
+.canvas-revision.marked-revision > header h2 { font-size: 20px; }
+.canvas-revision .revision-picture { margin-bottom: 20px; }
+.canvas-revision .word-help { margin-top: 8px; }
+.canvas-revision.marked-revision form > textarea { min-height: 80px; font-size: 16px; }
+.canvas-drawing { position: absolute; width: 680px; z-index: 5; }
+.canvas-drawing .drawing-overlay.inline-drawing { position: relative; inset: auto; max-height: 75dvh; overflow: auto; padding: 20px; border: 1px solid #cbd3c4; border-radius: 16px; background: #fffefb; }
+.inline-drawing .drawing-workspace h2 { font-size: 25px; }
+.inline-drawing .drawing-tools { gap: 8px; }
+.inline-drawing .drawing-workspace > footer { grid-template-columns: 1fr; gap: 16px; }
+.inline-drawing .drawing-colors { flex-wrap: wrap; }
+.app-workbench .node:has(.canvas-revision) { z-index: 6; }
+.app-workbench .task-editor { max-height: 65dvh; overflow: auto; }
+.app-workbench .node :is(textarea,select,button):focus-visible { outline: 3px solid #426de0; outline-offset: 2px; }
+@media (max-width: 700px) {
+ .canvas-drawing { width: 320px; }
+ .canvas-drawing .drawing-overlay.inline-drawing { padding: 12px; }
+ .inline-drawing .drawing-colors { justify-content: flex-start; }
+ .inline-drawing .drawing-colors button { width: 34px; min-width: 34px; padding: 3px; }
+ .inline-drawing .drawing-workspace h2 { font-size: 20px; }
+}
+.canvas-drawing { pointer-events: auto; }
+.canvas-revision .region-picture { max-width: 160px; margin: 0 auto; }
+.canvas-revision, .inline-drawing, .task-editor { overscroll-behavior: contain; }
+.app-workbench .new-idea-button { font-size: 14px; }
+@media (max-width: 600px) {
+ .app-workbench .new-idea-button:after { content: 'Tools'; }
+ .app-workbench .header-actions .new-idea-button { width: auto; padding: 0 10px; }
+ .canvas-drawing .drawing-overlay.inline-drawing { max-height: 62dvh; }
+}
