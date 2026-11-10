@@ -1,4 +1,13 @@
-## Nix character update — 2026-11-10 (local, not deployed)
+## Canvas styles and Nix squirrel — 2026-11-10 (released)
+
+Published together: simpler in-card Continue, stable result actions, in-card story
+reading, editable image style presets, and Nix as a lavender plush squirrel.
+Runtime commit `0d92fc9`; Worker `e5e16cb2-4dbd-4c00-90e0-7c45dadba217`.
+87 tests, build, Worker dry-run and production desktop/mobile smoke checks passed.
+Live provider status now reports image, text and music configured; no paid model
+request was made for this release. See DEPLOYMENT.md for verification and rollback.
+
+## Nix character update — 2026-11-10 (released)
 
 Nix is now a lavender plush squirrel with purple headphones, replacing the bat.
 The shared `public/assets/crew-lineup.png` atlas updates the homepage, crew pages,

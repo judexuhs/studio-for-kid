@@ -1,5 +1,29 @@
 # Pebli Cloudflare deployment
 
+## Canvas styles and Nix squirrel — 2026-11-10 (Asia/Shanghai)
+
+- Published the user-approved continuation/layout/style changes and the Nix
+  squirrel asset from the other session together. Runtime commit: `0d92fc9` on
+  `judexuhs/studio-for-kid` main; normal fast-forward push.
+- Worker `pebli-studio`: `e5e16cb2-4dbd-4c00-90e0-7c45dadba217`.
+  URL: https://pebli-studio.judexuhs.workers.dev/studio .
+- Verified previous deployment / rollback target:
+  `8cc271f1-a996-4271-817d-a0739a49f557` (includes the existing provider secrets).
+  No bindings, migrations, provider configuration or Rifflo resources changed.
+- Clean release checkout: 87 tests passed, Vite build and Worker dry-run passed.
+  Assets: `index-CFTA87SI.js`, `index-DlaM-Bcr.css`; live Nix atlas bytes match
+  the release file SHA-256. Nine public routes and both bundles returned 200.
+  Missing guest job access returned 401; foreign-origin generation returned 403.
+- Real production browser: 1440px crew and canvas, 390px canvas; squirrel Nix,
+  preset and custom-description persistence, same-canvas scene continuation,
+  upload -> Continue -> More ideas -> Pip Float verified. No document overflow.
+  Only the newly created `Release QA style 20261110` canvas was deleted.
+- Current live API reports image, text and music configured=true. This supersedes
+  older unconfigured-provider notes below. No paid model call was submitted;
+  the artistic quality of new image presets was not live-generation tested.
+- Ego task space 10 closed. All install/build/test/push/deploy processes exited;
+  no local server was started or stopped. Canonical development copy retained.
+
 ## Canvas-first release — 2026-11-10 (Asia/Shanghai)
 
 - User explicitly authorized GitHub sync and Cloudflare publication of the current
