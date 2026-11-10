@@ -1,4 +1,4 @@
-## Canvas-first creation — 2026-11-10 (local)
+## Canvas-first creation — 2026-11-10 (released)
 
 Supersedes the earlier three-choice start panel and automatic focused editor:
 children write directly in a canvas creation card. The same card holds progress,

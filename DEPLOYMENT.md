@@ -1,5 +1,33 @@
 # Pebli Cloudflare deployment
 
+## Canvas-first release — 2026-11-10 (Asia/Shanghai)
+
+- User explicitly authorized GitHub sync and Cloudflare publication of the current
+  implementation. Subsequent UX suggestions are not included.
+- Runtime commit: `d5c8e55233721eac6b218e950fa81aab31e8583a` on
+  `judexuhs/studio-for-kid` main. Normal fast-forward Git push; no force update.
+- Worker: `pebli-studio`; URL: https://pebli-studio.judexuhs.workers.dev/studio .
+  Version: `ccad9763-a00f-4289-aafd-4f34a90f660d`.
+- Verified prior version / rollback target:
+  `f3cb113c-f9eb-460c-8dd8-b22a131dea51`. From the Pebli package run
+  `npx wrangler rollback f3cb113c-f9eb-460c-8dd8-b22a131dea51` if required.
+  Rollback restores code/assets, not stored data. No bindings, secrets or storage
+  migrations changed; Rifflo was not deployed.
+- Independent release checkout: pinned npm install, **84 tests**, Vite build and
+  Wrangler dry-run passed. Assets: `index-HBIgDqSp.js`, `index-DUfmRIiK.css`.
+- HTTP checks: nine public page paths and both release assets returned 200;
+  all pages referenced the expected bundle. API status was no-store with secure
+  HttpOnly guest cookie. Missing owner 401, missing owned job 404, foreign origin 403.
+- Browser checks: desktop 1440×1000 inline start, actual drawing → Pip Hop,
+  saved-result restoration after reload, and 390×844 canvas overview with no
+  horizontal document overflow. Creation stayed on the canvas with no work dialog.
+- Providers remain unconfigured (`configured`, `textConfigured`,
+  `musicConfigured` all false). No paid model call was made. Local drawing,
+  motion and device save work; this release does not enable live AI generation.
+- Only `Release QA inline 20261110` was deleted and its removal checked.
+  Ego task space 6 finished. No server was started or stopped; build/deploy
+  processes exited. Canonical development files and release records are synced.
+
 ## Drawing and simplification release — 2026-11-07 (Asia/Shanghai)
 
 - Authorized by the user's explicit request to publish to GitHub and Cloudflare.

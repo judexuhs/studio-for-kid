@@ -205,3 +205,12 @@ or terminated. No provider requests, deployment or GitHub synchronization.
 The independent experiment directory was already untracked in this checkout;
 existing unrelated main-app modifications were preserved. Impeccable's nine
 advisories match incumbent tokens and its stale sidecar; no tooling migration.
+
+### Authorized publication — 2026-11-10
+
+Current canvas-first implementation published as runtime commit `d5c8e55` and
+Worker version `ccad9763-a00f-4289-aafd-4f34a90f660d`. The release copy passed 84
+tests, build and Worker preflight. Live route/assets/API boundary checks and
+real desktop/mobile drawing → Pip Hop → reload passed. Providers remain
+unconfigured; no paid call or new product change was included. QA canvas removed,
+browser space finished. See DEPLOYMENT.md for exact rollback and release evidence.

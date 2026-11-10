@@ -1,19 +1,19 @@
-## Canvas-first editing — 2026-11-10 (local, not deployed)
+## Canvas-first editing — 2026-11-10 (released)
 
 The start form and automatic full-screen work editor are removed. A new canvas
 starts with an editable, persisted creation card; generation, progress, results
 and picture revisions stay at that card. Drawing opens in canvas coordinates.
 Partner tasks, uploads and continuations remain on the canvas. Compare and final
-presentation/export views remain separate. Existing production status below is
-unchanged. Validation: 84 tests, Vite build, desktop and 390px mobile UI; browser
+presentation/export views remain separate. Published to GitHub main and the existing Pebli Worker. Runtime commit: `d5c8e55`;
+Worker version: `ccad9763-a00f-4289-aafd-4f34a90f660d`. Validation: 84 tests, Vite build, desktop and 390px mobile UI; browser
 mock image creation/revision, real local drawing → Pip, and reload recovery.
-No paid model requests or deployment. See CANVAS_IMPROVEMENTS.md.
+No paid model requests. Production providers remain unconfigured; see DEPLOYMENT.md.
 
 # Pebli — real character creation
 
 独立儿童 AI 创作产品：彩色自由画布、真实图片生成与参考图修改、版本比较、可下载的动态角色卡。
 
-## 当前线上版本 — 2026-11-07
+## 上一线上版本 — 2026-11-07
 
 **画板、圈选修改和操作精简已发布。** [打开 Pebli](https://pebli-studio.judexuhs.workers.dev/) · [进入创作画布](https://pebli-studio.judexuhs.workers.dev/studio)。源代码已同步至本仓库 `main`，功能提交为 `c3d5a7d`，Cloudflare 版本为 `f3cb113c-f9eb-460c-8dd8-b22a131dea51`。
 

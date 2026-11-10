@@ -1,4 +1,4 @@
-## Canvas editing update — 2026-11-10 (local)
+## Canvas editing update — 2026-11-10 (released)
 
 Creation is an Operate surface. Keep Gabarito, the cream dotted canvas, crew colors
 and existing 320px work cards. Replace the start-page layer with one editable
