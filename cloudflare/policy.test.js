@@ -17,10 +17,17 @@ test('paid jobs deduplicate by owner and ID, conflict on changed content, and do
  assert.equal((await claimJob(s,{...args,owner:'b'})).claimed,true);
  assert.equal(publicJob({...first.job,provider:'secret',owner:'private'}).owner,undefined);
 });
-test('guest resets cannot bypass network or global paid generation budgets',async()=>{
+test('new jobs have no guest, network, global or music count caps, including legacy counters',async()=>{
  const s=store();
- for(let i=0;i<6;i++)assert.equal((await claimJob(s,{owner:`guest${i}`,ip:'shared',id:`req-${i}`,hash:'h',kind:'image',now:1000})).claimed,true);
- assert.equal((await claimJob(s,{owner:'fresh',ip:'shared',id:'req-7',hash:'h',kind:'image',now:1000})).status,429);
+ for(const key of ['budget:guest:a:0','budget:network:shared:0','budget:global:hour:0','budget:global:day:0','budget:music:day:0'])
+  await s.put(key,{count:1000,expires:86400000});
+ for(const kind of ['image','text','music']){
+  for(let i=0;i<65;i++){
+   const result=await claimJob(s,{owner:'a',ip:'shared',id:`${kind}-${i}`,hash:'h',kind,now:1000});
+   assert.equal(result.claimed,true,`${kind} request ${i} must be accepted`);
+  }
+ }
+ assert.equal((await s.get('budget:global:day:0')).count,1000);
 });
 test('unknown completion does not expose provider payloads and keeps uncertainty explicit',()=>{
  const j=publicJob({id:'a',status:'uncertain',error:'The request may still be processing. Start a new one only if needed.',providerId:'hidden',hash:'hidden'});

@@ -68,7 +68,7 @@ export function restore(raw){try{const b=JSON.parse(raw);if(b.schema!==2||!Array
 export function validate(text){if(!text.trim())return 'Tell your partner what to make first.';if(text.length>500)return 'Keep your idea under 500 characters.';if(/[\w.+-]+@[\w.-]+\.[a-z]{2,}|(?:\d[\s-]?){8,}/i.test(text))return 'Keep names, email addresses and phone numbers out of your idea.';return '';}
 
 export function newProject(idea){const id=crypto.randomUUID();return {schema:2,id,name:'My new character',unlocked:false,view:typeof window!=='undefined'&&window.innerWidth<600?{x:-105,y:-80,z:1}:{x:0,y:0,z:1},nodes:[{id:'idea',kind:'note',x:140,y:210,text:idea,title:'My idea'},{id:'task',kind:'task',inline:true,partner:'moss',x:530,y:160,source:'idea',text:'Make this character. Give it a personality of its own.'}]}}
-export function canvasEntry(items){if(items.length)return {board:restore(JSON.stringify(items[0].board)),showStart:false};return {board:{schema:2,id:crypto.randomUUID(),name:'My new canvas',unlocked:false,view:{x:0,y:0,z:1},nodes:[]},showStart:true}}
+export function canvasEntry(items){items=items.filter(item=>!item.board.example);if(items.length)return {board:restore(JSON.stringify(items[0].board)),showStart:false};return {board:{schema:2,id:crypto.randomUUID(),name:'My new canvas',unlocked:false,view:{x:0,y:0,z:1},nodes:[]},showStart:true}}
 export function startIdea(board,idea){const next=newProject(idea);return {...next,id:board.nodes.length?next.id:board.id,unlocked:board.unlocked}}
 
 export const CREATION_ACTIONS={

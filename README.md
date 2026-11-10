@@ -145,3 +145,11 @@ npm run build
 本地保存不是云备份；下载 JSON 可以跨浏览器导入。文件导入不会自动重新发送未完成生成任务。角色一致性是参考图约束，不是像素级保证。
 
 产品说明：PRODUCT.md；视觉规范：DESIGN.md；验证记录：REHEARSAL.md；素材与 API 来源：ASSETS.md。无 Rifflo 主站改动；独立 Pebli 部署见 DEPLOYMENT.md。
+
+## Optional example canvas — 2026-11-11 (local)
+
+Open **My canvases → Nova & the star song · Example** to explore an editable
+sample with pictures, two scene versions, story, comic, stickers, music and motion.
+It never opens by default or replaces personal work. Each click creates a fresh
+local copy; edited copies stay in My canvases. Includes a ready-to-present world
+and embedded-media export. See CANVAS_IMPROVEMENTS.md for validation and scope.

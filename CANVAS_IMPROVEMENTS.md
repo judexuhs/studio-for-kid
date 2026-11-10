@@ -241,3 +241,32 @@ style reload, and two-version revision. Browser-intercepted image responses
 verified request style/reference payloads without paid model calls. Sample art
 was a fixture, not evidence of new generation quality. Existing local dev server
 was reused; no server started, no deployment or provider configuration changed.
+
+## Built-in example canvas — 2026-11-11 (local, not deployed)
+
+`My canvases` now always offers **Nova & the star song** as an authored Example.
+Only an explicit click loads its assets and creates an editable independent board.
+No seed writes, model calls or audio autoplay occur on entry. Automatic resume
+skips boards marked `example`; saved example remixes remain explicitly openable
+from the drawer. Existing ordinary boards and their default resume are preserved.
+This is available per browser, matching current IndexedDB storage; no account or
+cloud-sync changes.
+
+The example uses all four partners: Nova character, two scene versions with
+comparison, a real Tavi story, three-panel comic, six-sticker sheet, a real Nix
+155-second instrumental, and Pip's local float animation. It includes main-character
+and world settings, a five-work presentation with soundtrack, character-card export
+and portable embedded-media canvas backup. The built-in original remains available
+after editing or deleting a copy. Media is loaded only on demand. Asset provenance
+is in `public/assets/example/provenance.json`; the story and music were generated
+once through the existing configured local API, and new art with built-in image_gen.
+
+Validation: all 91 existing-plus-initial-example tests passed, followed by an
+additional passing real-media round-trip/export test (5 focused example tests total).
+Vite production build passed. Real browser checks at 1440×1000 and 390×844 covered
+explicit example entry, image decoding, audio playback, no autoplay in presentation,
+story expansion, two-version comparison, saved rename/reopen, ordinary default
+resume after visiting the example, mobile initial card framing and no page overflow.
+Test canvases were removed. The already-running local server was reused; no server
+process was started or stopped. No production deployment or private user-data API
+requests were made.

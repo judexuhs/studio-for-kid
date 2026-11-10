@@ -1,3 +1,11 @@
+## Generation limits — 2026-11-11 (local change, not deployed)
+
+At the owner’s request, the Cloudflare service no longer caps generation counts
+per guest, network, hour, day or music category. Existing budget counters do not
+block requests. Provider balance and provider-side limits still apply. Private
+job ownership, request deduplication and no automatic paid retries are preserved.
+This supersedes the historical production quota descriptions below.
+
 ## Canvas-first creation — 2026-11-10 (released)
 
 Supersedes the earlier three-choice start panel and automatic focused editor:

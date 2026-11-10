@@ -1,0 +1,10 @@
+{
+  "purpose": "Authored Pebli example canvas, not child work",
+  "character": "Existing /assets/moon-fox.png, built-in image_gen; see original asset provenance",
+  "worldVersions": ["/assets/nova-world.png", "/assets/nova-song-world.png"],
+  "stickers": {"tool":"built-in image_gen","source":"exec-92dc34ee-e7e5-47db-827d-40f32f76b146.png","reference":"moon-fox.png","brief":"Six tactile storybook stickers: Nova waving, hugging a friendly blue whale, drinking star cocoa, floating, sleeping on a moon and dancing. Cream/sage spacesuit and bubble helmet preserved."},
+  "comic": {"tool":"built-in image_gen","source":"exec-2cef06d5-f297-4a08-b8cf-710b454698d9.png","reference":"moon-fox.png","brief":"Three wordless panels: Nova meets Bloop, finds the missing squeaky note, and shares star cocoa. Plush storybook illustration on a lavender moon."},
+  "story": {"service":"Pebli text API","model":"google/gemini-2.5-flash","requestId":"example-nova-story-v1"},
+  "music": {"service":"Pebli music API","model":"fal-ai/minimax-music/v2.6","requestId":"example-nova-music-v1","instrumental":true,"brief":"Whimsical fox and space-whale soundtrack with celesta, pizzicato strings, playful marimba, rounded bass and sparkling bells."},
+  "motion": "Local Pip float preset, not generated video"
+}
