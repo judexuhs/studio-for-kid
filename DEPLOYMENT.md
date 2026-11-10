@@ -1,5 +1,20 @@
 # Pebli Cloudflare deployment
 
+## Example canvas + generation caps — 2026-11-11 (GitHub synced, CF pending)
+
+- User authorized publishing both changes together to GitHub and Cloudflare.
+- Runtime commit: `e50782b` on `judexuhs/studio-for-kid` main; fast-forward push.
+- Optional authored example canvas plus removal of guest/network/global/hourly/
+  daily/music generation count caps. Ownership, deduplication, no automatic paid
+  retries, payload validation and seven-day retention remain unchanged.
+- Clean release checkout: pinned npm install, 92 tests, Vite build and Worker
+  dry-run passed. Bundles: `index-NGdyjl6R.js`, `index-DlaM-Bcr.css`.
+- Cloudflare publication is pending renewed login. Wrangler's prior login was
+  unavailable and the OAuth attempt timed out; the browser is awaiting the owner’s
+  Cloudflare/Google sign-in. No Worker upload or production mutation occurred.
+- Intended target remains `pebli-studio`; verify its current deployment/rollback
+  version after authentication before uploading. No binding or migration changes.
+
 ## Canvas styles and Nix squirrel — 2026-11-10 (Asia/Shanghai)
 
 - Published the user-approved continuation/layout/style changes and the Nix
