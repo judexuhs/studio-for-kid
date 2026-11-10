@@ -1,3 +1,4 @@
+import {imageStyleSettings} from './image-styles.js';
 import {sourceNodes,validate} from './model.js';
 import {worldContext} from './world.js';
 
@@ -17,5 +18,6 @@ export function prepareCreationRequest(board,id){
   if(inputs.filter(n=>n.image).length===4)throw Error('Four pictures are already selected. Turn off Bring my world or remove a picture.');
   inputs=[...inputs,main];
  }
+ if(task.partner==='moss'){Object.assign(task,imageStyleSettings(task,inputs.some(n=>n.image)));const styleError=task.styleDescription?validate(task.styleDescription):'';if(styleError)throw Error(styleError)}
  return {snapshot:{...task,worldContext:task.useWorld?worldContext(board):''},input:input?structuredClone(input):null,inputs:structuredClone(inputs)};
 }

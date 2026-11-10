@@ -1,3 +1,12 @@
+## Nix character update — 2026-11-10 (local, not deployed)
+
+Nix is now a lavender plush squirrel with purple headphones, replacing the bat.
+The shared `public/assets/crew-lineup.png` atlas updates the homepage, crew pages,
+and canvas avatars together. The other three character cells are pixel-identical
+to the previous atlas; names and partner functions are unchanged. Desktop and
+390px mobile homepage plus the studio were visually checked. Generation details
+are recorded in `public/assets/crew-lineup.png.json`.
+
 ## Canvas-first editing — 2026-11-10 (released)
 
 The start form and automatic full-screen work editor are removed. A new canvas

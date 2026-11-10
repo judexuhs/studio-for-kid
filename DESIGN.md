@@ -427,3 +427,17 @@ Its older schema/sidecar drift was recorded, not repaired as part of this featur
 - Ideas 保留具体可编辑起点，移除重复格式总览。帮助与流程说明使用实际操作名称。
 
 验证有界完成：一次桌面／手机批量检查、集中修复、一次确认；颜色和字号检测仅提示既有设计文档尺度差异，无新增阻断项。没有把文档旧侧车格式整理纳入本轮。
+
+## Canvas continuation and style controls — 2026-11-10
+
+Result actions keep a stable three-column row. Continue expands in the card with
+three relevant picture actions and a More ideas disclosure; the branch handle
+opens that same control. Multi-picture selection alone uses a floating picker.
+Story cards use a short non-scrolling preview, with explicit in-card reading.
+On phones, long card bodies scroll within a bounded region above canvas controls.
+
+Moss shows one Style selector with a default matte 2D illustration, colored pencil,
+paper cutout and pixel art. Reference workflows also offer Keep original style.
+Adjust style reveals the editable description; style is separate from subject
+instructions. Presets describe materials, palette, shading and composition;
+no promise of deterministic image quality or identity preservation is implied.

@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-10",
+  "tool": "built-in image_gen",
+  "change": "Nix, the music partner, is now a lavender plush squirrel with purple headphones. Other three character cells preserved pixel-for-pixel.",
+  "prompt": "Use case: precise-object-edit. Edit the provided four-character sprite sheet. It has FOUR equal-width cells. Replace ONLY character THREE (purple bat wearing purple headphones) with an adorable LAVENDER PURPLE SQUIRREL in the EXACT SAME fuzzy plush toy / needle-felted 3D style as the other three companions. Round soft cheeks, small rounded squirrel ears, big glossy warm brown eyes, tiny pink nose, cream pale-lavender belly, short cute paws, a large fluffy curled upright squirrel tail clearly visible alongside its body. Keep the purple headphones around its neck and cheerful curious expression. No wings or gliding membranes, no large bat ears, no clothing added. Keep its head and feet at similar heights and whole character strictly inside third quarter with padding. Preserve characters ONE (cream moss-antler puppy with pencil), TWO (green turtle with glasses and book), FOUR (cream rabbit with blue bag) unchanged. Preserve four equal-width cell layout, full bodies, transparent background, no lettering, no shadows outside cells. Output same wide 3:1 composition as input.",
+  "extractionPrompt": "Extract only the lavender plush squirrel, preserve its design and purple headphones, full body on transparent background, portrait 3:4.",
+  "source": "exec-517e743d-a98b-493d-91e3-47bd1399c769.png",
+  "processing": "Resize transparent squirrel to 543x724; replace only third cell of original 2172x724 RGBA atlas."
+}

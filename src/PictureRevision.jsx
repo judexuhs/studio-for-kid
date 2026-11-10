@@ -1,3 +1,5 @@
+import {ImageStyle} from './ImageStyle';
+import {imageStyleSettings} from './image-styles';
 import React,{useRef,useState} from 'react';
 import {X,ArrowRight,RotateCcw} from 'lucide-react';
 import {pointOnDrawing,regionFromDrag,AREA_CHOICES,areaRegion} from './creative-tools';
@@ -17,13 +19,15 @@ export function RegionPicture({node,region,onChange}){
  </div>;
 }
 export function PictureRevision({inline=false,node,initialText='',initialPreserve='',initialRegion=null,onClose,onSubmit}){
+ const [style,setStyle]=useState(()=>imageStyleSettings({imageStyle:'reference'},true));
  const [text,setText]=useState(initialText),[preserve,setPreserve]=useState(initialPreserve),[region,setRegion]=useState(initialRegion),[error,setError]=useState('');
- function submit(e){e.preventDefault();const error=validate(text)||(preserve?validate(preserve):'');if(error){setError(error);return}onSubmit({text,preserve,editRegion:region})}
+ function submit(e){e.preventDefault();const error=validate(text)||(preserve?validate(preserve):'');if(error){setError(error);return}onSubmit({text,preserve,editRegion:region,...style})}
  return <section className={`revision-sheet marked-revision ${inline?'canvas-revision':''}`} role={inline?"region":"dialog"} aria-modal={inline?undefined:true} aria-labelledby="revision-title" onKeyDown={e=>{if(inline){if(e.key==='Escape'){e.stopPropagation();onClose()}}else trapDialogKeys(e,onClose)}}>
   <header><h2 id="revision-title">What would you change?</h2><button aria-label="Close revision" onClick={onClose}><X size={22}/></button></header>
   <div className="revision-picture"><RegionPicture node={node} region={region} onChange={setRegion}/><div className="region-controls"><label>Mark an area<select aria-label="Choose an area to change" value="" onChange={e=>{if(e.target.value!=='')setRegion(areaRegion(Number(e.target.value)))}}><option value="">{region?'Area marked · choose another':'Drag a circle, or choose here'}</option>{AREA_CHOICES.map((label,i)=><option key={label} value={i}>{label}</option>)}</select></label><button aria-label="Clear marked area" disabled={!region} onClick={()=>setRegion(null)}><RotateCcw size={17}/></button></div><p>The circle guides Moss. Your original stays safe.</p></div>
   <form onSubmit={submit}><label htmlFor="change-words">I want to change…</label><textarea id="change-words" aria-label="Your changes" maxLength={500} placeholder="Make the scarf yellow. Add tiny stars to it." value={text} onChange={e=>{setText(e.target.value);setError('')}}/>
    <label htmlFor="keep-words">Keep these details <span>(optional)</span></label><textarea id="keep-words" aria-label="Keep these details" maxLength={180} placeholder="The face, ears and blue boots." value={preserve} onChange={e=>setPreserve(e.target.value)}/>
+   <ImageStyle node={style} hasReference onChange={setStyle}/>
    <details className="word-help"><summary>Help me say it</summary><p>Try one detail at a time: “Make the hat taller.”</p><p>Then say what you like: “Keep the little ears.”</p></details>
    {error&&<p className="entry-error" role="alert">{error}</p>}<button className="make-button" disabled={!text.trim()}>Make this change<ArrowRight size={18}/></button>
   </form>

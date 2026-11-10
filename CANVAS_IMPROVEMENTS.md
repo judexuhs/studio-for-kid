@@ -214,3 +214,30 @@ tests, build and Worker preflight. Live route/assets/API boundary checks and
 real desktop/mobile drawing → Pip Hop → reload passed. Providers remain
 unconfigured; no paid call or new product change was included. QA canvas removed,
 browser space finished. See DEPLOYMENT.md for exact rollback and release evidence.
+
+## Continuation and image art direction — 2026-11-10 (local)
+
+User request: remove disconnected creation pages and crowded continuation menus;
+provide a restrained default image style and editable style presets.
+
+- Continue and the branch handle share the same in-card menu. Three picture
+  suggestions appear first; stickers, soundtrack, motion and combine are under
+  More ideas. Only multi-picture selection uses the floating picker.
+- Edit / Continue / Download stay in fixed positions. Story previews expand into
+  an in-card reader. Mobile card content scrolls above the canvas controls.
+- Image presets: matte 2D illustration (new-image default), colored pencil,
+  paper cutout, pixel art; reference edits can keep the original style. Each
+  description is editable. Explicit style settings persist through request
+  snapshots, results, continuation and reload. Revision starts by preserving the
+  original style unless the child changes it.
+- Both local and Worker image routes share server validation and provider prompt
+  construction. Custom style text has a 500-character limit and contact-detail
+  rejection. Existing requests without style fields retain reference style.
+
+Validation: 3 initially failing style regression tests now pass; all 87 Pebli
+unit tests and Vite production build pass. Real browser checks at 1440px and
+390px covered in-canvas continuation, story reading, preset changes, custom
+style reload, and two-version revision. Browser-intercepted image responses
+verified request style/reference payloads without paid model calls. Sample art
+was a fixture, not evidence of new generation quality. Existing local dev server
+was reused; no server started, no deployment or provider configuration changed.
