@@ -22,8 +22,13 @@
   401 and foreign-origin generation returns 403. No paid production model call.
 - User completed renewed Cloudflare OAuth after the default automated broad-scope
   flow was rejected. No bindings, migrations, secrets or Rifflo resources changed.
-- Desktop/mobile local UI verification passed before release. Post-deploy browser
-  verification is awaiting return of browser control from the login handoff.
+- Real production browser checks passed at 1440×1000 and 390×844: eight-card
+  example opens explicitly, pictures decode, 155-second music plays, presentation
+  audio stays paused, and no document overflow. Renamed copy saves/reopens; reload
+  returns to ordinary work instead of the example. Only the release QA example
+  copy was deleted; built-in template remains. Ego task space 16 closed.
+- No background install/test/build/deploy process remains; the pre-existing local
+  development server was not started or stopped by this release.
 
 ## Canvas styles and Nix squirrel — 2026-11-10 (Asia/Shanghai)
 
