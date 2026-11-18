@@ -98,7 +98,7 @@
 ## Creative worlds release and source sync — 2026-11-06
 
 - The approved creative-worlds release was synchronized to `main` at https://github.com/judexuhs/studio-for-kid. Initial source commit: `50937bb7b8cac6ccd038a441f11ef206389e98e1`.
-- The repository is independently installable with Node.js 22+, `npm ci`, and its own pinned Wrangler dependency. Source, public assets and font licenses are included; local canvases, job records, credentials, builds and historical design archives are excluded. The canonical development files remain in the original Pebli directory.
+- The repository is independently installable with Node.js 22+, `npm ci`, and its own pinned Wrangler dependency. Source, public assets and font licenses are included; local canvases, job records, credentials, builds and historical design archives are excluded. The canonical development directory is now `/Users/judexu/Desktop/我做的项目/Pebli` (relocated 2026-11-18).
 - A clean independent installation passed all 59 tests, the Vite production build and Wrangler dry-run. Release assets: `index-D7BCS9QH.js` and `index-WX-eIhUL.css`.
 - **Deployed:** https://pebli-studio.judexuhs.workers.dev/ ; version `d06b77c7-036c-475b-9c58-85915aa76cd2`. The expired CLI session was renewed through Cloudflare's official OAuth flow. Only the existing `pebli-studio` Worker was updated; no Rifflo resources, bindings or storage migrations changed.
 - **Verified rollback target:** `ee23b295-1cc6-4266-b74c-b8f06121887c`, read from the deployment list immediately before this release. Use `npx wrangler rollback ee23b295-1cc6-4266-b74c-b8f06121887c` if needed; this restores code/assets, not stored data.
@@ -147,7 +147,7 @@ Deployment URL, version, validation and rollback will be recorded below after de
 
 ## Commands and recovery
 
-Run from the Pebli package directory (the standalone repository root, or `experiments/crew-workbench` in the original development workspace):
+Run from the standalone Pebli directory, `/Users/judexu/Desktop/我做的项目/Pebli`:
 
 ```sh
 npm test

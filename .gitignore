@@ -15,3 +15,7 @@ archive/
 reference/
 Pebli Canvas.html
 skills-lock.json
+
+# Local design tooling and retired single-file prototype exporter
+.vendor/
+scripts/standalone.mjs

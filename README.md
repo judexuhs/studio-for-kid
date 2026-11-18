@@ -1,3 +1,9 @@
+# Pebli
+
+日常开发目录：`/Users/judexu/Desktop/我做的项目/Pebli`。
+
+2026-11-18 已从 Rifflo 的 `experiments/crew-workbench` 整体移出。直接在本目录运行 `npm run dev`，或双击 `Open Pebli.command`。项目目录、迁移与验证说明见 [WORKSPACE.md](WORKSPACE.md)；命名研究见 [naming-shortlist.md](naming-shortlist.md)。下方按日期保留历次发布记录。
+
 ## Example canvas and online generation limits — 2026-11-11 (released)
 
 **My canvases → Nova & the star song · Example** is now live. The editable
@@ -82,7 +88,7 @@ npm ci
 npm run dev
 ```
 
-本地预览地址为 http://127.0.0.1:4175。生成服务从项目根目录的 `.env.local` 读取 `OPENROUTER_API_KEY` 和 `FAL_KEY`；这些文件不会提交到仓库。图片和文字使用 OpenRouter，音乐使用 fal。也可以通过 `PEBLI_ENV_FILE` 显式指定已有服务端配置文件；不再自动读取任意父目录的配置。在原开发工作区沿用共享配置时，使用 `PEBLI_ENV_FILE=../../.env.local npm run dev`。配置仅由服务端运行时加载，不进入浏览器。
+本地预览地址为 http://127.0.0.1:4175。生成服务从项目根目录的 `.env.local` 读取 `OPENROUTER_API_KEY` 和 `FAL_KEY`；这些文件不会提交到仓库。图片和文字使用 OpenRouter，音乐使用 fal。也可以通过 `PEBLI_ENV_FILE` 显式指定已有服务端配置文件；不再自动读取任意父目录的配置。独立目录不再依赖 Rifflo 的环境文件；需要真实生成时，请在 Pebli 自己的服务端配置中提供密钥。配置仅由服务端运行时加载，不进入浏览器。
 
 ```sh
 npm test
@@ -92,7 +98,7 @@ npm run preview
 
 Cloudflare 使用本项目的 Wrangler 依赖和 `wrangler.jsonc`。现有配置指向 Pebli 的生产 Worker；其他人部署自己的副本前，应更换账号、Worker 名称和 R2 绑定。完成 `npx wrangler login` 后，使用 `npm run cf:deploy` 发布；供应商密钥需在目标 Worker 单独配置，详见 [部署记录](DEPLOYMENT.md)。
 
-独立仓库包含运行代码、公共素材、字体许可和项目文档，不包含本机画布、请求记录、凭证、构建产物及历史设计归档。下方历史记录提到的 `evidence/` 截图与导出仅保留在原开发工作区。
+独立仓库包含运行代码、公共素材、字体许可和项目文档，不包含本机画布、请求记录、凭证、构建产物及历史设计归档。本地项目保留了下方历史记录提到的 `evidence/` 截图、导出与历史设计归档；这些内容仍不进入发布仓库。
 
 ## 本轮功能与发布前本地验收 — 2026-11-06
 

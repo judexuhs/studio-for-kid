@@ -11,8 +11,8 @@ The browser composes this cutout over simple procedural scene geometry; colour v
 
 ## Existing Rifflo art
 
-- `moss.webp`: copied from `../../public/assets/maker-premium/pet-curious.webp`; original project provenance remains in the sibling `.webp.json` there.
-- `pip.webp`: copied from `../../public/assets/home/otti-rabbit-guide.webp`; original project provenance remains in the sibling `.webp.json` there.
+- `moss.webp`: copied from `../children learn AI/public/assets/maker-premium/pet-curious.webp`; original project provenance remains in the sibling `.webp.json` there.
+- `pip.webp`: copied from `../children learn AI/public/assets/home/otti-rabbit-guide.webp`; original project provenance remains in the sibling `.webp.json` there.
 - Experimental names do not rename characters in the parent product.
 
 ## Fonts and components
